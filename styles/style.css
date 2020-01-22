@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  background-color: #0f2135;
+}
+
+.main-header__container {
+  width: 1366px;
+  height: 100px;
+}
+
+.about {
+  background: url(../images/wpapers-white-and-blue.jpg) no-repeat;
+  background-size: cover;
+}
+
+.about__container {
+  width: 1366px;
+  height: 436px;
+}
+
+.products {
+  background-color: #f2f4f5;
+}
+
+.products__container {
+  width: 1366px;
+  height: 616px;
+}
+
+.main_footer {
+  background-color: #ffffff;
+}
+
+.main_footer__container {
+  width: 1366px;
+  height: 340px;
+}
