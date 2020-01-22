@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap&subset=cyrillic');
 
 body {
   margin: 0;
@@ -37,8 +37,12 @@ body {
   padding-right: 54px;
 }
 
+.main-header__menu-item:last-child {
+  padding-right: 0;
+}
+
 .main-header__menu-item a {
-  font-family: Monserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -58,13 +62,57 @@ body {
 }
 
 .about {
+  width: 100%;
+  height: 436px;
   background: url(../images/wpapers-white-and-blue.jpg) no-repeat;
   background-size: cover;
 }
 
 .about__container {
-  width: 1366px;
-  height: 436px;
+  max-width: 1366px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 99px;
+}
+
+.about__title {
+  margin: 0 0 33px 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  color: #0f2135;
+  text-align: center;
+}
+
+.about__description {
+  margin: 0 0 31px 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  color: #0f2135;
+}
+
+.about__button {
+  width: 225px;
+  height: 58px;
+  border-radius: 8px;
+  background-color: #e43898;
+  border: none;
+  box-shadow: none;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.about__button:hover {
+  background-color: #9f0e60;
 }
 
 .products {
