@@ -23,6 +23,7 @@
   </header>
 
   <main class="main">
+
     <section class="about">
       <div class="about__container">
         <h1 class="about__title">Мы – лучшая компания в Мире</h1>
@@ -30,12 +31,11 @@
         <button class="about__button">Заказать</button>
       </div>
     </section>
+
     <section class="products">
       <div class="products__container">
-        <h2 class="products__title">Кейсы</h2>
-        
+        <h2 class="products__title">Кейсы</h2>        
         <div class="products__wrapper">
-
           <div class="products__case">
             <div class="products__case-image"><img src="image/product-1.jpg"></div>
             <div class="products__case-wrapper">
@@ -44,7 +44,6 @@
             </div>
             <button class="products__case-button">Читать полностью</button>
           </div>
-
           <div class="products__case">
             <div class="products__case-wrapper">
               <span class="products__case-date">12 августа</span>
@@ -53,7 +52,6 @@
             </div>
             <button class="products__case-button">Читать полностью</button>
           </div>
-
           <div class="products__case">
             <div class="products__case-wrapper">
               <span class="products__case-date">10 августа</span>
@@ -62,30 +60,26 @@
             </div>
             <button class="products__case-button">Читать полностью</button>
           </div>
-
         </div>
-
       </div>
-    </section>      
+    </section> 
+
   </main>
   
   <footer class="main-footer">
-    <div class="main_footer__container">
-
+    <div class="main-footer__container">
       <div class="main-footer__information">
-        <p>Следите за нашей компанией, подпишитесь на рассылку, мы не будем навязчивыми</p>
-        <p>Новости выходят один раз в неделю в самом лучшем формате</p>
+        <p class="main-footer__information-title">Следите за нашей компанией, подпишитесь на рассылку, мы не будем навязчивыми</p>
+        <p class="main-footer__information-notice">Новости выходят один раз в неделю в самом лучшем формате</p>
       </div>
-      <div class="main-footer__describe">
-        <input type="email" name="Ваш e-mail">
-        <div>
-          <input type="checkbox" id="agreement" name="agreement">
-          <label for="agreement">Согласен с условиями сервиса</label>
+      <div class="main-footer__subscribe">
+        <input type="email" name="email" placeholder="Ваш e-mail" class="main-footer__subscribe-email">
+        <div class="main-footer__subscribe-agreement">
+          <input type="checkbox" id="agreement" name="agreement" class="main-footer__subscribe-checkbox">
+          <label for="agreement">Согласен с <a href="#">условиями</a> сервиса</label>
         </div>
-
-        <button>Подписаться</button>
-        <button>Не хочу</button>
-
+        <button class="main-footer__subscribe-button main-footer__subscribe-button-agree">Подписаться</button>
+        <button class="main-footer__subscribe-button main-footer__subscribe-button-disagree">Не хочу</button>
       </div>
     </div>
   </footer>
