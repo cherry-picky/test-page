@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "date": "2020-01-01",
+    "title": "Happy New year!",
+    "description": "Congratulations! 2020 has already arrived"
+  },
+  {
+    "id": 2,
+    "date": "2020-01-02",
+    "title": "Second day of new year",
+    "description": "Please, send me any news or events, that happening in this year"
+  }
+]

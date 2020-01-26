@@ -38,7 +38,7 @@
           <a class="products__slider-arrows products__slider-arrows-left" href="#"></a>
           <a class="products__slider-arrows products__slider-arrows-right" href="#"></a>
         </div>        
-        <div class="products__wrapper">
+        <div class="products__wrapper" id="news-block">
           <div class="products__case">
             <div class="products__case-image"></div>
             <div class="products__case-wrapper">
@@ -85,6 +85,68 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    var body = document.querySelector('body');
+
+    fetchNews(processingRequest);
+
+    function processingRequest(err, data) {
+      if (err) showError(err.message);
+
+      renderNews(data);
+    }
+
+    function showError(message) {
+      body.innerHTML = message;
+    }
+
+    function renderNews(news) {
+      var block = document.getElementById('news-block');
+      var template = document.getElementById('news-article');
+      var article = null;
+
+      block.innerHTML = '';
+
+      for (var i in news) {
+        var article = render(template, news[i]);
+
+        block.appendChild(article);
+      }
+    }
+
+    function render(t, article) {
+      var date = t.content.querySelector('.products__case-date');
+      var title = t.content.querySelector('.products__case-title');
+      var description = t.content.querySelector('.products__case-description');
+
+      date.textContent = article.date;
+      title.textContent = article.title;
+      description.textContent = article.description;
+
+      return document.importNode(t.content, true);
+    }
+
+    function fetchNews(callback) {
+      var apiUrl = 'https://cherry-picky.github.io/test-page/news.json';
+      var request = new XMLHttpRequest();
+
+      request.open('GET', apiUrl);
+      request.responseType = 'json';
+      request.send();
+
+      request.onload = function() {
+        if (request.status !== 200)
+          callback({ message: 'Сервер вернул статус ' + request.status });
+        else
+          callback(null, request.response);
+      };
+
+      request.onerror = function(err) { 
+        callback({ message: 'Ошибка соединения' });
+      };
+    }
+  </script>
 
 </body>
 </html>
