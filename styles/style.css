@@ -16,6 +16,8 @@ input, button {
   height: 100px;
   background-color: #0f2135;
   position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .main-header__container {
@@ -118,12 +120,12 @@ input, button {
   background-color: #9f0e60;
 }
 
-.products {
+.cases {
   width: 100%;
   background-color: #f2f4f5;
 }
 
-.products__container {
+.cases__container {
   max-width: 1366px;
   min-height: 616px;
   margin: 0 auto;
@@ -132,23 +134,23 @@ input, button {
   overflow: hidden;
 }
 
-.products__title {
+.cases__title {
   margin: 0 0 30px 0;
   color: #0f2135;
   font-size: 30px;
   font-weight: bold;
 }
 
-.products__slider {
+.cases__slider {
   display: none;
 }
 
-.products__wrapper {
+.cases__wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.products__case {
+.cases__card {
   max-width: 352px;
   height: 397px; 
   display: flex;
@@ -159,27 +161,27 @@ input, button {
   box-shadow: 0 2px 14px 0 rgba(15, 33, 53, 0.11);
 }
 
-.products__case-image {
+.cases__card-image {
   width: 100%;
   height: 163px;
-  background: url(../images/product-1.jpg) no-repeat;
+  background: url(../images/case-1.jpg) no-repeat;
   background-size: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.products__case-wrapper {
+.cases__card-wrapper {
   padding: 20px 25px 0 25px;
   box-sizing: border-box;
 }
 
-.products__case-date {
+.cases__card-date {
   margin-bottom: 11px;
   font-size: 14px;
   color: #7f8d9c;
 }
 
-.products__case-title {
+.cases__card-title {
   margin-bottom: 11px;
   font-size: 16px;
   font-weight: bold;
@@ -187,7 +189,7 @@ input, button {
   color: #0f2135;
 }
 
-.products__case-description {
+.cases__card-description {
   max-width: 302px;
   font-size: 14px;
   line-height: 1.43;
@@ -195,7 +197,7 @@ input, button {
   word-wrap: break-word;
 }
 
-.products__case-read-more {
+.cases__card-read-more {
   height: 63px;
   display: block;
   padding: 22px 0 0 25px;
@@ -214,7 +216,7 @@ input, button {
   cursor: pointer;
 }
 
-.products__case-read-more:hover {
+.cases__card-read-more:hover {
   background: url('../images/arrow-right-hover.svg') no-repeat;
   background-position: 95% 50%;
   color: #e43898;
@@ -274,6 +276,11 @@ input, button {
   outline: none;
 }
 
+.main-footer__subscribe-email::placeholder {
+  color: #7f8d9c;
+  font-size: 16px;
+}
+
 .main-footer__subscribe-email:hover {
   border-color: #e43898;
 }
@@ -310,16 +317,14 @@ input, button {
   cursor: pointer;
 }
 
-/*.main-footer__subscribe-checkbox + label:hover {
-  border: 1px solid #e43898;
-}*/
-
 .main-footer__subscribe-checkbox + label:hover:before {
   border: 1px solid #e43898;
 }
 
 .main-footer__subscribe-checkbox:checked + label:before {
-  content: '\2713';
+  content: '';
+  background: url('../images/check.svg') no-repeat;
+  background-position: center center;
   background-color: #e43898;
   border: none;
   color: #ffffff;
@@ -376,11 +381,11 @@ input, button {
     max-width: 666px;
   }
 
-  .products__case {
+  .cases__card {
     max-width: 250px;
   }
 
-  .products__case-description {
+  .cases__card-description {
     max-width: 200px;
   }
 
@@ -399,6 +404,10 @@ input, button {
 }
 
 @media screen and (max-width: 999px) and (min-width: 200px) {
+  .main-header {
+    height: 70px;
+  }
+
   .main-header__logo-image {
     width: 110px;
   }
@@ -433,42 +442,42 @@ input, button {
     font-size: 18px;
   }
 
-  .products__container {
+  .cases__container {
     padding: 73px 30px 79px 30px;
     position: relative;
   }
 
-  .products__slider {
+  .cases__slider {
     display: flex;
     position: absolute;
     top: 14%;
     right: 5%;
   }
 
-  .products__slider-arrows {
+  .cases__slider-arrows {
     width: 39px;
     height: 11px;
     cursor: pointer;
   }
 
-  .products__slider-arrows-left {
+  .cases__slider-arrows-left {
     margin-right: 16px;
     background: url('../images/arrow-left.svg') no-repeat;
   }
 
-  .products__slider-arrows-left:hover {
+  .cases__slider-arrows-left:hover {
     background: url('../images/arrow-left-hover.svg') no-repeat;
   }
 
-  .products__slider-arrows-right {
+  .cases__slider-arrows-right {
     background: url('../images/arrow-right.svg') no-repeat;
   }
 
-  .products__slider-arrows-right:hover {
+  .cases__slider-arrows-right:hover {
     background: url('../images/arrow-right-hover.svg') no-repeat;
   }
 
-  .products__case {
+  .cases__card {
     min-width: 300px;
     margin-right: 25px;
   }
