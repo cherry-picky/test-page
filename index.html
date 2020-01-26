@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-   
+
   <header class="main-header">
     <div class="main-header__container">
       <div class="main-header__logo">
@@ -37,7 +37,7 @@
         <div class="products__slider">
           <a class="products__slider-arrows products__slider-arrows-left" href="#"></a>
           <a class="products__slider-arrows products__slider-arrows-right" href="#"></a>
-        </div>        
+        </div>
         <div class="products__wrapper" id="news-block">
           <div class="products__case">
             <div class="products__case-image"></div>
@@ -65,9 +65,9 @@
           </div>
         </div>
       </div>
-    </section> 
+    </section>
   </main>
-  
+
   <footer class="main-footer">
     <div class="main-footer__container">
       <div class="main-footer__information">
@@ -85,6 +85,17 @@
       </div>
     </div>
   </footer>
+
+  <template id="news-article">
+    <div class="products__case">
+      <div class="products__case-wrapper">
+        <span class="products__case-date"></span>
+        <h3 class="products__case-title"></h3>
+        <p class="products__case-description"></p>
+      </div>
+      <a class="products__case-read-more" href="#">Читать полностью</a>
+    </div>
+  </template>
 
   <script>
     var body = document.querySelector('body');
