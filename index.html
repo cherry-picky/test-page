@@ -105,12 +105,26 @@
       var date = t.content.querySelector('.cases__card-date');
       var title = t.content.querySelector('.cases__card-title');
       var description = t.content.querySelector('.cases__card-description');
+      var link = t.content.querySelector('.cases__card-read-more');
 
       date.textContent = article.date;
       title.textContent = article.title;
       description.textContent = article.description;
+      link.setAttribute('href', urlToCase(article.id));
 
-      return document.importNode(t.content, true);
+      var articleTemplate = document.importNode(t.content, true);
+      var img = article.image;
+
+      if (img) {
+        var imageBlock = document.createElement('div');
+
+        imageBlock.classList.add('cases__card-image');
+        imageBlock.setAttribute('style', 'background-image: url(' + img + ')');
+
+        articleTemplate.querySelector('.cases__card').prepend(imageBlock);
+      }
+
+      return articleTemplate;
     }
 
     function fetchNews(callback) {
@@ -128,9 +142,13 @@
           callback(null, request.response);
       };
 
-      request.onerror = function(err) { 
+      request.onerror = function(err) {
         callback({ message: 'Ошибка соединения' });
       };
+    }
+
+    function urlToCase(id) {
+      return '/case/' + parseInt(id);
     }
   </script>
 
